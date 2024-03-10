@@ -1,9 +1,57 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
+<ion-header>
+  <ion-card class="menu-card">
+    <ion-card-content>
+      <ion-row>
+
+        <ion-col size="4">
+          <a href="#" class="link-menu">
+            <ion-icon name="menu-outline" class="icon-menu"></ion-icon>
+          </a>
+        </ion-col>
+        <ion-col size="4" class="to-center">
+          <a href="#" class="link-menu">
+            <img src="assets/img/usina-play.png" alt="Usina Play">
+          </a>
+        </ion-col>
+        <ion-col size="4" class="to-right">
+          <a href="#" class="link-menu">
+            <ion-icon name="notifications-outline" class="icon-notification"></ion-icon>
+          </a>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="user-container">
+        <ion-col size="3" class="user-image">
+          <ion-avatar>
+            <img src="assets/img/avatar.png" />
+          </ion-avatar>
+        </ion-col>
+        <ion-col size="9" class="user-data">
+          <ion-row>
+            <div class="user-info">
+              <h2 class="user-name">{{userName}}</h2>
+              <label class="user-level">{{userLevel}}</label>
+            </div>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col class="to-center">
+          <div class="menu-inline">
+            <a href="#" class="link-submenu">
+              <ion-icon name="body" class="icon-submenu"></ion-icon>
+              MEU CORPO
+            </a>
+            <a href="#" class="link-submenu">
+              <ion-icon name="trophy" class="icon-submenu"></ion-icon>
+              OBJETIVOS E CONQUISTAS
+            </a>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
 </ion-header>
 
 <ion-content [fullscreen]="true">

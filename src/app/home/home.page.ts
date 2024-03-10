@@ -9,4 +9,7 @@ export class HomePage {
 
   constructor() {}
 
+  userName = 'Leonardo Santos';
+  userLevel = 'Nível Roxo';
+
 }
