@@ -56,10 +56,36 @@
 
 <ion-content fullscreen="true">
   <ion-card>
-    <ion-card-title>
-      Personal Online <ion-icon name="plus"></ion-icon>
+    <ion-card-title class="slideshow-title-container">
+      Personal Online<ion-icon name="add-circle-outline"></ion-icon>
     </ion-card-title>
-    <ion-card-content>
+    <ion-card-content class="slideshow-container">
+      <swiper-container (slideChange)="swiperSlideChanged($event)" [loop]="true" [pagination]="false">
+        <swiper-slide *ngFor="let image of images">
+          <img [src]="image" class="slide-img">
+        </swiper-slide>
+      </swiper-container>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-title class="slideshow-title-container">
+      Programas<ion-icon name="barbell-outline"></ion-icon>
+    </ion-card-title>
+    <ion-card-content class="slideshow-container">
+      <swiper-container (slideChange)="swiperSlideChanged($event)" [loop]="true" [pagination]="false">
+        <swiper-slide *ngFor="let image of images">
+          <img [src]="image" class="slide-img">
+        </swiper-slide>
+      </swiper-container>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-title class="slideshow-title-container">
+      Conteúdos
+    </ion-card-title>
+    <ion-card-content class="slideshow-container">
       <swiper-container (slideChange)="swiperSlideChanged($event)" [loop]="true" [pagination]="false">
         <swiper-slide *ngFor="let image of images">
           <img [src]="image" class="slide-img">
