@@ -7,9 +7,21 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
-
+  //User
   userName = 'Leonardo Santos';
   userLevel = 'Nível Roxo';
+
+  //Slides
+  images = [
+    '../../assets/img/hipertrofia.jpg',
+    '../../assets/img/yoga.jpg',
+    '../../assets/img/crossfit.jpg'
+  ]
+
+  constructor() {}
+
+  swiperSlideChanged(e: any) {
+    console.log('changed: ', e);
+  }
 
 }
