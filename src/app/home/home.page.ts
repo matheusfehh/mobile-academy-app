@@ -12,11 +12,12 @@ export class HomePage {
   userLevel = 'Nível Roxo';
 
   //Slides
-  images = [
-    '../../assets/img/hipertrofia.jpg',
-    '../../assets/img/yoga.jpg',
-    '../../assets/img/crossfit.jpg'
-  ]
+  //Subtitulos recebem variaveis dinamicas
+  items = [
+    { imageSrc: '../../assets/img/hipertrofia.jpg', title: 'LEVANTAMENTO DE PESO', subtitle: '' },
+    { imageSrc: '../../assets/img/yoga.jpg', title: 'YOGA EXPRESS', subtitle: '' },
+    { imageSrc: '../../assets/img/crossfit.jpg', title: 'CROSSFIT', subtitle: '' }
+  ];
 
   constructor() {}
 

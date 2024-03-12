@@ -1,6 +1,5 @@
 #container {
   text-align: center;
-
   position: absolute;
   left: 0;
   right: 0;
@@ -16,9 +15,7 @@
 #container p {
   font-size: 16px;
   line-height: 22px;
-
   color: #8c8c8c;
-
   margin: 0;
 }
 
@@ -28,6 +25,10 @@
 
 ion-header {
   background-color: transparent;
+}
+
+ion-content {
+  margin-bottom: 0 !important;
 }
 
 ion-avatar {
@@ -98,7 +99,7 @@ ion-avatar {
 }
 
 .user-name {
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 700;
   color: #FFF;
 }
@@ -152,7 +153,6 @@ ion-avatar {
 /* Slideshows */
 
 .slideshow-title-container {
-  background-color: #000000;
   font-size: 24px;
 }
 
@@ -160,6 +160,7 @@ ion-avatar {
   margin-bottom: -4px;
   margin-left: 5px;
   color: orange;
+  background-color: transparent !important;
 }
 
 .slideshow-container {
@@ -168,7 +169,8 @@ ion-avatar {
   padding-left: 0px;
   padding-right: 0px;
   height: auto;
-  background-color: #000000;
+  overflow: hidden;
+  background-color: transparent !important;
 }
 
 swiper-container {
@@ -179,21 +181,38 @@ swiper-container {
 swiper-slide {
   display: flex;
   flex-direction: column;
-  align-items: right;
+  align-items: flex-start; 
   justify-content: center;
+  width: 100%; 
+  position: relative;
 }
 
 .slide-img {
   border-radius: 15px;
-  width: 70vw;
-  height: 39.38vw;
+  width: 100%; 
+  height: 24vh;
   display: block;
-  overflow: hidden;
+  object-fit: cover;
+  filter: grayscale(70%) !important;
 }
 
-.slide-img img {
+.slide-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: grayscale(50%);
+  color: #fff;
+  box-sizing: border-box;
+}
+
+.slide-caption h4,
+.slide-caption p {
+  margin: 0;
+  font-weight: 900;
+}
+
+.transparent-bg {
+  background: none;
+  --ion-background-color: transparent;
 }
